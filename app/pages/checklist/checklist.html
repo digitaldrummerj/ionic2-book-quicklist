@@ -11,12 +11,10 @@
 <ion-content>
   <ion-list no-lines>
     <ion-items-sliding *ngFor="let item of checklist.items" class="home-sliding-item">
-              <button ion-item class="home-item">
-<ion-item-content>
+      <ion-item>
         <ion-label>{{item.title}}</ion-label>
         <ion-checkbox [checked]="item.checked" (click)="toggleItem(item)" class="checklist-item"></ion-checkbox>        
-      </ion-item-content>
-              </button>
+      </ion-item>
       <ion-item-options>
         <button light (click)="renameItem(item)"><ion-icon name="clipboard"></ion-icon> Edit</button>
         <button danger (click)="removeItem(item)"><ion-icon name="trash"></ion-icon> Delete</button>
